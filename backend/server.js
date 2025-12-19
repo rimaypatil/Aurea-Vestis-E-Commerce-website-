@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const cors = require('cors');
 const helmet = require('helmet');
-const connectDB = require('./config/db');
+const connectDB = require('./src/db');
 
 // Route files
 const authRoutes = require('./routes/authRoutes');
