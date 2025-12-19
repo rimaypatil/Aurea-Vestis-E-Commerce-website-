@@ -26,7 +26,7 @@ app.use(helmet());
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://aureavestis.netlify.app/"
+        "https://aureavestis.netlify.app"
     ],
     credentials: true
 }));
