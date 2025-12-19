@@ -54,7 +54,7 @@ export default function CategoryPage() {
                     params.category = displayCategory; // Sneakers or Accessories
                 }
 
-                const res = await axios.get('http://localhost:5000/api/products/filters', { params });
+                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters', { params });
 
                 if (res.data.success) {
                     setFilterOptions(res.data.data);

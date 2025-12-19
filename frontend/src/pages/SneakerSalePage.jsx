@@ -24,7 +24,7 @@ export default function SneakerSalePage() {
     useEffect(() => {
         const fetchFilters = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/products/filters', {
+                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters', {
                     params: { category: 'Sneakers' }
                 });
                 if (res.data.success) {

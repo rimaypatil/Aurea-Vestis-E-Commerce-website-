@@ -62,7 +62,7 @@ export default function MenPage() {
     useEffect(() => {
         const fetchFilters = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/products/filters', {
+                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters', {
                     params: { parentCategory: 'men' }
                 });
                 if (res.data.success) {
