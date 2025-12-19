@@ -46,9 +46,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
-app.use('/api/addresses', require('./routes/addressRoutes'));
+app.use('/api/addresses', require('./src/routes/addressRoutes'));
 app.use('/api/wishlist', wishlistRoutes);
-app.use('/api/newsletter', require('./routes/newsletterRoutes'));
+app.use('/api/newsletter', require('./src/routes/newsletterRoutes'));
 
 // Basic Route
 
