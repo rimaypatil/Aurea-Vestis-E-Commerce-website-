@@ -24,7 +24,7 @@ export default function TrendingPage() {
 
     const fetchTrending = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/products/trending');
+            const response = await axios.get('https://aureavestis.netlify.app/api/products/trending');
             if (response.data.success) {
                 setProducts(response.data.data);
             }

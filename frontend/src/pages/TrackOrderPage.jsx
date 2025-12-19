@@ -17,7 +17,7 @@ const TrackOrderPage = () => {
             try {
                 // Assuming the backend is running on localhost:5000 based on previous context
                 // Adjust base URL if configured differently in axios defaults
-                const res = await axios.get('http://localhost:5000/api/orders/myorders', {
+                const res = await axios.get('https://aureavestis.netlify.app/api/orders/myorders', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setOrders(res.data.data);

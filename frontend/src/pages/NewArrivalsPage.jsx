@@ -58,7 +58,7 @@ export default function NewArrivalsPage() {
             });
 
             // Using general products endpoint, defaulted to sorted by date (newest)
-            const res = await axios.get('http://localhost:5000/api/products', { params });
+            const res = await axios.get('https://aureavestis.netlify.app/api/products', { params });
             if (res.data.success) {
                 setProducts(res.data.data);
             }

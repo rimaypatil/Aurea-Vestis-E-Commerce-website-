@@ -90,7 +90,7 @@ export default function AccessoriesPage() {
                 }
             });
 
-            const res = await axios.get('http://localhost:5000/api/products', { params });
+            const res = await axios.get('https://aureavestis.netlify.app/api/products', { params });
             if (res.data.success) {
                 if (reset) {
                     setProducts(res.data.data);

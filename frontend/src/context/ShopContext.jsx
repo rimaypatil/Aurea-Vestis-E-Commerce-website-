@@ -16,7 +16,7 @@ export const ShopProvider = ({ children }) => {
     const fetchCart = async () => {
         if (!isAuthenticated) return;
         try {
-            const res = await axios.get('http://localhost:5000/api/cart');
+            const res = await axios.get('https://aureavestis.netlify.app/api/cart');
             if (res.data.success) {
                 setCart(res.data.data);
             }
@@ -29,7 +29,7 @@ export const ShopProvider = ({ children }) => {
     const fetchWishlist = async () => {
         if (!isAuthenticated) return;
         try {
-            const res = await axios.get('http://localhost:5000/api/wishlist');
+            const res = await axios.get('https://aureavestis.netlify.app/api/wishlist');
             if (res.data.success) {
                 setWishlist(res.data.data);
             }
@@ -52,7 +52,7 @@ export const ShopProvider = ({ children }) => {
     const addToCart = async (productId, size, color, quantity = 1) => {
         if (!isAuthenticated) return false;
         try {
-            const res = await axios.post('http://localhost:5000/api/cart', { productId, size, color, quantity });
+            const res = await axios.post('https://aureavestis.netlify.app/api/cart', { productId, size, color, quantity });
             if (res.data.success) {
                 setCart(res.data.data);
                 showToast('Added to Cart', 'success');
@@ -68,7 +68,7 @@ export const ShopProvider = ({ children }) => {
     const updateQuantity = async (productId, quantity) => {
         if (!isAuthenticated) return;
         try {
-            const res = await axios.put(`http://localhost:5000/api/cart/${productId}`, { quantity });
+            const res = await axios.put(`https://aureavestis.netlify.app/api/cart/${productId}`, { quantity });
             if (res.data.success) {
                 setCart(res.data.data);
             }
@@ -80,7 +80,7 @@ export const ShopProvider = ({ children }) => {
     const removeFromCart = async (productId) => {
         if (!isAuthenticated) return;
         try {
-            const res = await axios.delete(`http://localhost:5000/api/cart/${productId}`);
+            const res = await axios.delete(`https://aureavestis.netlify.app/api/cart/${productId}`);
             if (res.data.success) {
                 setCart(res.data.data);
             }
@@ -97,13 +97,13 @@ export const ShopProvider = ({ children }) => {
 
         try {
             if (inWishlist) {
-                const res = await axios.delete(`http://localhost:5000/api/wishlist/${productId}`);
+                const res = await axios.delete(`https://aureavestis.netlify.app/api/wishlist/${productId}`);
                 if (res.data.success) {
                     setWishlist(res.data.data);
                     showToast('Removed from Wishlist', 'info');
                 }
             } else {
-                const res = await axios.post('http://localhost:5000/api/wishlist', { productId });
+                const res = await axios.post('https://aureavestis.netlify.app/api/wishlist', { productId });
                 if (res.data.success) {
                     setWishlist(res.data.data);
                     showToast('Added to Wishlist', 'success');

@@ -73,7 +73,7 @@ export default function SneakerCollectionPage() {
             });
 
             // Use the specific endpoint requested by user
-            const res = await axios.get('http://localhost:5000/api/products/sneakers', { params });
+            const res = await axios.get('https://aureavestis.netlify.app/api/products/sneakers', { params });
             if (res.data.success) {
                 if (reset) {
                     setProducts(res.data.data);

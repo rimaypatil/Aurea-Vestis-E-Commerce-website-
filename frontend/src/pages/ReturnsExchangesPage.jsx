@@ -17,7 +17,7 @@ const ReturnsExchangesPage = () => {
             setLoading(true);
             try {
                 // Fetch orders using the same endpoint
-                const res = await axios.get('http://localhost:5000/api/orders/myorders', {
+                const res = await axios.get('https://aureavestis.netlify.app/api/orders/myorders', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 // Filter for eligible orders (e.g., delivered within last 30 days)

@@ -67,7 +67,7 @@ export default function AccessoryCollectionPage() {
             });
 
             // Use dedicated accessories endpoint
-            const res = await axios.get('http://localhost:5000/api/products/accessories', { params });
+            const res = await axios.get('https://aureavestis.netlify.app/api/products/accessories', { params });
             if (res.data.success) {
                 setProducts(res.data.data);
             }

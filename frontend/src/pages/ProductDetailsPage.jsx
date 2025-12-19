@@ -20,7 +20,7 @@ const ProductDetailsPage = () => {
             try {
                 setLoading(true);
                 // Correct API endpoint as confirmed in backend inspection
-                const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
+                const { data } = await axios.get(`https://aureavestis.netlify.app/api/products/${id}`);
                 if (data.success) {
                     setProduct(data.data);
                     // Dynamic Title SEO
