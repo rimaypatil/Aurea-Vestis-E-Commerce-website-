@@ -6,11 +6,11 @@ const helmet = require('helmet');
 const connectDB = require('./config/db');
 
 // Route files
-const authRoutes = require('./src/routes/authRoutes');
-const productRoutes = require('./src/routes/productRoutes');
-const cartRoutes = require('./src/routes/cartRoutes');
-const orderRoutes = require('./src/routes/orderRoutes');
-const wishlistRoutes = require('./src/routes/wishlistRoutes');
+const authRoutes = require('./routes/authRoutes');
+const productRoutes = require('./routes/productRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+const wishlistRoutes = require('./routes/wishlistRoutes');
 const limiter = require('./utils/limiter');
 
 // Load env vars
@@ -47,9 +47,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
-app.use('/api/addresses', require('./src/routes/addressRoutes'));
+app.use('/api/addresses', require('./routes/addressRoutes'));
 app.use('/api/wishlist', wishlistRoutes);
-app.use('/api/newsletter', require('./src/routes/newsletterRoutes'));
+app.use('/api/newsletter', require('./routes/newsletterRoutes'));
 
 // Basic Route
 
