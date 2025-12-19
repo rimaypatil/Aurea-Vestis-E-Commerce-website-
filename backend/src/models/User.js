@@ -29,10 +29,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         default: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Default' // Fallback
     },
-    otp: {
-        code: String,
-        expiresAt: Date
-    },
+
     addresses: [{
         fullName: { type: String, required: true },
         phone: { type: String, required: true },
