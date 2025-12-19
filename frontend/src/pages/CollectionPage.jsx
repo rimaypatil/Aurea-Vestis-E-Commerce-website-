@@ -19,7 +19,7 @@ const CollectionPage = ({ collectionName, title, description }) => {
             setLoading(true);
             try {
                 // Determine API URL. Assuming Vite proxy or standard localhost
-                const apiUrl = import.meta.env.VITE_API_URL || 'https://aureavestis.netlify.app/api';
+                const apiUrl = import.meta.env.VITE_API_URL || 'https://aurea-vestis-e-commerce-website.onrender.com/api';
 
                 // Fetch products with the specific collection name
                 // Using generic /products endpoint with query param

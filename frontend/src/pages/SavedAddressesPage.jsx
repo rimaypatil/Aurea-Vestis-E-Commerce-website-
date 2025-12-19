@@ -36,7 +36,7 @@ const SavedAddressesPage = () => {
         try {
             const token = localStorage.getItem('token');
             const config = { headers: { Authorization: `Bearer ${token}` } };
-            const res = await axios.get('https://aureavestis.netlify.app/api/addresses', config);
+            const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/addresses', config);
             if (res.data.success) {
                 setAddresses(res.data.data);
             }
@@ -125,11 +125,11 @@ const SavedAddressesPage = () => {
             let res;
             if (editingId) {
                 // Update
-                res = await axios.put(`https://aureavestis.netlify.app/api/addresses/${editingId}`, formData, config);
+                res = await axios.put(`https://aurea-vestis-e-commerce-website.onrender.com/api/addresses/${editingId}`, formData, config);
                 showToast('Address updated successfully', 'success');
             } else {
                 // Create
-                res = await axios.post('https://aureavestis.netlify.app/api/addresses', formData, config);
+                res = await axios.post('https://aurea-vestis-e-commerce-website.onrender.com/api/addresses', formData, config);
                 showToast('Address added successfully', 'success');
             }
 
@@ -163,7 +163,7 @@ const SavedAddressesPage = () => {
         try {
             const token = localStorage.getItem('token');
             const config = { headers: { Authorization: `Bearer ${token}` } };
-            const res = await axios.delete(`https://aureavestis.netlify.app/api/addresses/${id}`, config);
+            const res = await axios.delete(`https://aurea-vestis-e-commerce-website.onrender.com/api/addresses/${id}`, config);
             if (res.data.success) {
                 // DELETE usually returns updated list or success msg
                 // CheckoutPage: setAddresses(res.data.data) -> implies list.

@@ -24,7 +24,7 @@ export default function Newsletter() {
         }
 
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL || 'https://aureavestis.netlify.app'}/api/newsletter/subscribe`, { email });
+            const res = await axios.post(`${import.meta.env.VITE_API_URL || 'https://aurea-vestis-e-commerce-website.onrender.com'}/api/newsletter/subscribe`, { email });
             if (res.data.success) {
                 navigate('/home/newsletter-success');
             }

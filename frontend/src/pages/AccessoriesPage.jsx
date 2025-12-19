@@ -31,7 +31,7 @@ export default function AccessoriesPage() {
     useEffect(() => {
         const fetchFilters = async () => {
             try {
-                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters', {
+                const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com-website.onrender.com/api/products/filters', {
                     params: { category: 'Accessories,Bags,Footwear,Wallets,Belts,Perfume,Watches,Jewellery,Sunglasses,Hats' }
                 });
                 if (res.data.success) {
@@ -90,7 +90,7 @@ export default function AccessoriesPage() {
                 }
             });
 
-            const res = await axios.get('https://aureavestis.netlify.app/api/products', { params });
+            const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products', { params });
             if (res.data.success) {
                 if (reset) {
                     setProducts(res.data.data);

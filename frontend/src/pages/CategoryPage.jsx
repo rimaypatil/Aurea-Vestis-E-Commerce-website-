@@ -54,7 +54,7 @@ export default function CategoryPage() {
                     params.category = displayCategory; // Sneakers or Accessories
                 }
 
-                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters', { params });
+                const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products/filters', { params });
 
                 if (res.data.success) {
                     setFilterOptions(res.data.data);
@@ -111,7 +111,7 @@ export default function CategoryPage() {
                 }
             });
 
-            const res = await axios.get('https://aureavestis.netlify.app/api/products', { params });
+            const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products', { params });
             if (res.data.success) {
                 setProducts(res.data.data);
             }

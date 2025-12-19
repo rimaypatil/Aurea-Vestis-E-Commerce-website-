@@ -29,7 +29,7 @@ const AuthModal = ({ isOpen, onClose }) => {
         setLoading(true);
         setError('');
         try {
-            await axios.post('https://aureavestis.netlify.app/api/auth/send-otp', { identifier });
+            await axios.post('https://aurea-vestis-e-commerce-website.onrender.com/api/auth/send-otp', { identifier });
             setStep(2);
         } catch (err) {
             setError(err.response?.data?.message || 'Failed to send OTP');
@@ -43,7 +43,7 @@ const AuthModal = ({ isOpen, onClose }) => {
         setLoading(true);
         setError('');
         try {
-            const res = await axios.post('https://aureavestis.netlify.app/api/auth/verify-otp', { identifier, otp });
+            const res = await axios.post('https://aurea-vestis-e-commerce-website.onrender.com/api/auth/verify-otp', { identifier, otp });
             login(res.data);
             onClose();
             // Reset state

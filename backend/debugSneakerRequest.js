@@ -3,7 +3,7 @@ const axios = require('axios');
 async function testQuery() {
     try {
         console.log('Sending request: category=Sneakers, subCategory=Casual Sneakers');
-        const res = await axios.get('https://aureavestis.netlify.app/api/products', {
+        const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products', {
             params: {
                 category: 'Sneakers',
                 subCategory: 'Casual Sneakers'

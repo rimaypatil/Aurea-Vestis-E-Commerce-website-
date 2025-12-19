@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const testRequest = async () => {
     try {
-        const url = 'https://aureavestis.netlify.app/api/products';
+        const url = 'https://aurea-vestis-e-commerce-website.onrender.com/api/products';
         const params = {
             parentCategory: 'men',
             'category[nin]': 'Accessories,Sneakers',

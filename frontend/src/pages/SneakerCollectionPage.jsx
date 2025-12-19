@@ -32,7 +32,7 @@ export default function SneakerCollectionPage() {
     useEffect(() => {
         const fetchFilters = async () => {
             try {
-                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters', {
+                const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products/filters', {
                     params: { category: 'Sneakers' }
                 });
                 if (res.data.success) setFilterOptions(res.data.data);
@@ -73,7 +73,7 @@ export default function SneakerCollectionPage() {
             });
 
             // Use the specific endpoint requested by user
-            const res = await axios.get('https://aureavestis.netlify.app/api/products/sneakers', { params });
+            const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products/sneakers', { params });
             if (res.data.success) {
                 if (reset) {
                     setProducts(res.data.data);

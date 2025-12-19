@@ -15,7 +15,7 @@ export default function BestsellerPage() {
 
     const fetchBestsellers = async () => {
         try {
-            const response = await axios.get('https://aureavestis.netlify.app/api/products/bestsellers');
+            const response = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products/bestsellers');
             if (response.data.success) {
                 setProducts(response.data.data);
             }

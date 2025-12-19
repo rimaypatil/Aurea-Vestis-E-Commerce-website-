@@ -25,7 +25,7 @@ export default function NewArrivalsPage() {
     useEffect(() => {
         const fetchFilters = async () => {
             try {
-                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters');
+                const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products/filters');
                 if (res.data.success) {
                     setFilters(res.data.data);
                 }
@@ -58,7 +58,7 @@ export default function NewArrivalsPage() {
             });
 
             // Using general products endpoint, defaulted to sorted by date (newest)
-            const res = await axios.get('https://aureavestis.netlify.app/api/products', { params });
+            const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products', { params });
             if (res.data.success) {
                 setProducts(res.data.data);
             }

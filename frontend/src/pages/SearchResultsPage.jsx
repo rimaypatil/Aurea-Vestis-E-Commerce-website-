@@ -21,7 +21,7 @@ const SearchResultsPage = () => {
             try {
                 setLoading(true);
                 setError(null);
-                const res = await axios.get(`https://aureavestis.netlify.app/api/products?search=${query}`);
+                const res = await axios.get(`https://aurea-vestis-e-commerce-website.onrender.com/api/products?search=${query}`);
                 setProducts(res.data.data);
             } catch (err) {
                 console.error("Error fetching search results:", err);

@@ -47,7 +47,7 @@ const CheckoutPage = () => {
         try {
             const token = localStorage.getItem('token');
             const config = { headers: { Authorization: `Bearer ${token}` } };
-            const res = await axios.get('https://aureavestis.netlify.app/api/addresses', config);
+            const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/addresses', config);
             if (res.data.success) {
                 setAddresses(res.data.data);
                 // Auto-select default or first
@@ -99,7 +99,7 @@ const CheckoutPage = () => {
         try {
             const token = localStorage.getItem('token');
             const config = { headers: { Authorization: `Bearer ${token}` } };
-            const res = await axios.post('https://aureavestis.netlify.app/api/addresses', newAddress, config);
+            const res = await axios.post('https://aurea-vestis-e-commerce-website.onrender.com/api/addresses', newAddress, config);
             if (res.data.success) {
                 setAddresses(res.data.data);
                 setIsAddressModalOpen(false);
@@ -120,7 +120,7 @@ const CheckoutPage = () => {
         try {
             const token = localStorage.getItem('token');
             const config = { headers: { Authorization: `Bearer ${token}` } };
-            const res = await axios.delete(`https://aureavestis.netlify.app/api/addresses/${id}`, config);
+            const res = await axios.delete(`https://aurea-vestis-e-commerce-website.onrender.com/api/addresses/${id}`, config);
             if (res.data.success) {
                 setAddresses(res.data.data);
                 if (selectedAddress === id) {
@@ -174,7 +174,7 @@ const CheckoutPage = () => {
                 totalPrice: totalAmount
             };
 
-            const res = await axios.post('https://aureavestis.netlify.app/api/orders', orderData, config);
+            const res = await axios.post('https://aurea-vestis-e-commerce-website.onrender.com/api/orders', orderData, config);
             if (res.data.success) {
                 showToast('Order Placed Successfully!', 'success');
                 navigate(`/order-success/${res.data.data._id}`);

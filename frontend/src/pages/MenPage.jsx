@@ -62,7 +62,7 @@ export default function MenPage() {
     useEffect(() => {
         const fetchFilters = async () => {
             try {
-                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters', {
+                const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products/filters', {
                     params: { parentCategory: 'men' }
                 });
                 if (res.data.success) {
@@ -124,7 +124,7 @@ export default function MenPage() {
                 }
             });
 
-            const res = await axios.get('https://aureavestis.netlify.app/api/products', { params });
+            const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products', { params });
             if (res.data.success) {
                 if (reset) {
                     setProducts(res.data.data);

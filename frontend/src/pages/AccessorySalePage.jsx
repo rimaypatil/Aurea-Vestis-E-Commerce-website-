@@ -23,7 +23,7 @@ export default function AccessorySalePage() {
     useEffect(() => {
         const fetchFilters = async () => {
             try {
-                const res = await axios.get('https://aureavestis.netlify.app/api/products/filters', {
+                const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products/filters', {
                     params: { category: 'Accessories' }
                 });
                 if (res.data.success) {
@@ -85,7 +85,7 @@ export default function AccessorySalePage() {
                 }
             });
 
-            const res = await axios.get('https://aureavestis.netlify.app/api/products', { params });
+            const res = await axios.get('https://aurea-vestis-e-commerce-website.onrender.com/api/products', { params });
             if (res.data.success) {
                 setProducts(res.data.data);
             }
