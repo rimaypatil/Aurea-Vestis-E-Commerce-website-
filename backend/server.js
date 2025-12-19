@@ -6,12 +6,12 @@ const helmet = require('helmet');
 const connectDB = require('./src/db');
 
 // Route files
-const authRoutes = require('./routes/authRoutes');
-const productRoutes = require('./routes/productRoutes');
-const cartRoutes = require('./routes/cartRoutes');
-const orderRoutes = require('./routes/orderRoutes');
-const wishlistRoutes = require('./routes/wishlistRoutes');
-const limiter = require('./utils/limiter');
+const authRoutes = require('./src/routes/authRoutes');
+const productRoutes = require('./src/routes/productRoutes');
+const cartRoutes = require('./src/routes/cartRoutes');
+const orderRoutes = require('./src/routes/orderRoutes');
+const wishlistRoutes = require('./src/routes/wishlistRoutes');
+const limiter = require('./src/utils/limiter');
 
 // Load env vars
 dotenv.config();
